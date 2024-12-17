@@ -114,7 +114,7 @@ void insertAtSpecificPosition()
 
     if(pos>count)
     {
-       printf("Invalid position\n");
+        printf("Invalid position\n");
     }
     else
     {
