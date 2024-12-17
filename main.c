@@ -146,7 +146,7 @@ void insertAtSpecificPosition()
 
 int main()
 {
-    int choice = 1;
+    int choice = 1,option;
 
     while (choice)
     {
@@ -157,9 +157,9 @@ int main()
         printf("5.Insert At Specific Position\n");
         printf("6.Exit\n");
         printf("Enter your choice: ");
-        scanf("%d",&choice);
+        scanf("%d",&option);
 
-        switch (choice)
+        switch (option)
         {
         case 1:
             createAccount();
