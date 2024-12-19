@@ -7,6 +7,7 @@
 user *head = NULL, *newuser, *temp;
 int count = 0;
 
+
 void createAccount()
 {
     newuser=(user*)malloc(sizeof(user));
@@ -17,9 +18,7 @@ void createAccount()
     }
 
     printf("Enter User ID: ");
-    scanf(" %[^\n]", newuser->userID);
-    printf("Enter Name: ");
-    scanf(" %[^\n]", newuser->name);
+    scanf("%d",&newuser->userID);
 
     newuser->next = NULL;
 
@@ -46,8 +45,7 @@ void displayAccount()
     while(temp != NULL)
     {
         printf("Account Details\n");
-        printf("Account ID : %s\n", temp->userID);
-        printf("Name : %s\n", temp->name);
+        printf("User ID : %d\n",temp->userID);
 
         temp = temp->next;
     }
@@ -64,9 +62,7 @@ void insertAtBegining()
     }
 
     printf("Enter User ID: ");
-    scanf(" %[^\n]", newuser->userID);
-    printf("Enter Name: ");
-    scanf(" %[^\n]", newuser->name);
+    scanf("%d", &newuser->userID);
 
     newuser->next = head;
     head = newuser;
@@ -86,9 +82,7 @@ void insertAtEnd()
     }
 
     printf("Enter User ID: ");
-    scanf(" %[^\n]", newuser->userID);
-    printf("Enter Name: ");
-    scanf(" %[^\n]", newuser->name);
+    scanf("%d", &newuser->userID);
 
     newuser->next = NULL;
     temp = head;
@@ -106,7 +100,7 @@ void insertAtEnd()
 void insertAtSpecificPosition()
 {
     int pos=1,i =1;
-    printf("Enter position to insert\n");
+    printf("Enter position to insert:");
     scanf("%d",&pos);
 
     if(pos>count)
@@ -129,9 +123,7 @@ void insertAtSpecificPosition()
         }
 
         printf("Enter User ID: ");
-        scanf(" %[^\n]", newuser->userID);
-        printf("Enter Name: ");
-        scanf(" %[^\n]", newuser->name);
+        scanf("%d", &newuser->userID);
 
         newuser->next = temp->next;
         temp->next = newuser;
@@ -154,7 +146,7 @@ int mainInsertion()
         printf("4.Insert At End\n");
         printf("5.Insert At Specific Position\n");
         printf("6.Exit\n");
-        printf("Enter your choice: ");
+        printf("Enter your choice:");
         scanf("%d",&option);
 
         switch (option)

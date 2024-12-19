@@ -2,8 +2,7 @@
 #define INSERTION_H
 
 typedef struct user{
-    char userID[20];
-    char name[50];
+    int userID;
     struct user *next;
 }user;
 

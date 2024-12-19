@@ -49,7 +49,7 @@ void deleteFromSpecificPosition()
 
     temp = head;
 
-    printf("Enter the position\n");
+    printf("Enter the position:");
     scanf("%d",&pos);
 
     while(i<pos-1)
