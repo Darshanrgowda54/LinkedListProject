@@ -4,6 +4,14 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-    main.c
+    deletion.c \
+    insertion.c \
+    main.c \
+    search.c \
+    traversal.c
 
-HEADERS +=
+HEADERS += \
+    deletion.h \
+    insertion.h \
+    search.h \
+    traversal.h
